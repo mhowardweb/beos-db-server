@@ -7,6 +7,11 @@ const gql = require("fastify-gql");
 // Import GraphQL Schema
 const schema = require("./schema");
 
+// Register Fastify CORS
+fastify.register(require("fastify-cors"), {
+  // put your options here
+});
+
 // Register Fastify GraphQL
 fastify.register(gql, {
   schema,
